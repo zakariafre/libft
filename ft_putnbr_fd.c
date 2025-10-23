@@ -6,7 +6,7 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:05:09 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/23 17:30:36 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/23 20:33:57 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,23 @@ void	ft_putchar(char c, int fd)
 	write(fd, &c, 1);
 }
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
-		return;
+		return ;
 	}
 	if (n < 0)
 	{
 		write(fd, "-", 1);
 		n = n * (-1);
 		ft_putnbr_fd(n, fd);
-		return;
+		return ;
 	}
 	if (n >= 10)
 	{
-		ft_putnbr_fd(n / 10 , fd);
+		ft_putnbr_fd(n / 10, fd);
 	}
 	ft_putchar((n % 10) + 48, fd);
 }

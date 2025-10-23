@@ -6,15 +6,16 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:21:24 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/23 17:31:23 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/23 20:51:39 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main()
-{	
-	ft_putnbr_fd(-0, 5);
-    
-}
+// int main()
+// {	
+// 	char *s1 = "***zakariae*++";
+// 	char *set = "*+";
 
+// 	printf("%s", ft_strtrim(s1, set));
+// }

@@ -6,7 +6,7 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 00:20:01 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/22 15:21:39 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/23 20:37:53 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*strcopy(char const *s1, char const *s2)
 		j++;
 	}
 	result[j] = '\0';
-	return(result);
+	return (result);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)

@@ -6,17 +6,18 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:10:06 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/23 17:22:51 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/23 21:54:25 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+# define LIBFT_H
+
+# include <stddef.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -59,3 +60,5 @@ void	ft_putnbr_fd(int n, int fd);
 // memory layout
 // fd 
 // seg fault | bus error 
+// memory leak
+// 

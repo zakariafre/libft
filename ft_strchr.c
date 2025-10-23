@@ -6,7 +6,7 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:12:14 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/22 15:27:20 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/23 21:42:59 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ char	*ft_strchr(const char *s, int c)
 
 	str = (char *)s;
 	i = 0;
-	if (!s)
-		return (NULL);
-	while (s[i])
+	while (str[i])
 	{
 		if (s[i] == (char)c)
 		{

@@ -6,13 +6,31 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 16:04:28 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/22 18:05:18 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/23 20:29:35 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*copytodest(void *s2, const void *s1, int memlen, int start)
+{
+	int		i;
+	char	*str1;
+	char	*str2;
+
+	i = 0;
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	while (i < memlen)
+	{
+		str2[i] = str1[start + i];
+		i++;
+	}
+	str2[i] = '\0';
+	return (str2);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*s2;
 	int		start;
@@ -21,7 +39,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	int		i;
 
 	end = 0;
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	if (set[0] == '\0')
 		return (ft_strdup(s1));
@@ -29,19 +47,13 @@ char *ft_strtrim(char const *s1, char const *set)
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	end = ft_strlen(s1);
-	while(end > start && ft_strchr(set, s1[end - 1]))
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	memlen = end - start;
 	s2 = malloc(memlen + 1);
 	if (!s2)
 		return (NULL);
 	i = 0;
-	while(i < memlen)
-	{
-		s2[i] = s1[start];
-		i++;
-		start++;
-	}
-	s2[i] = '\0';
-	return(s2);
+	copytodest(s2, s1, memlen, start);
+	return (s2);
 }
