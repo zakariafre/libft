@@ -36,7 +36,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 	int		memlen;
-	int		i;
 
 	end = 0;
 	if (!s1 || !set)
@@ -53,7 +52,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s2 = malloc(memlen + 1);
 	if (!s2)
 		return (NULL);
-	i = 0;
 	copytodest(s2, s1, memlen, start);
 	return (s2);
 }

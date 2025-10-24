@@ -58,10 +58,8 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		nbrlen;
 	int		sign;
-	int		i;
 	long	nb;
 
-	i = 0;
 	nb = n;
 	sign = 1;
 	nbrlen = digit_len(nb);

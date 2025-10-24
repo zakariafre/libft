@@ -1,13 +1,12 @@
-NAME = libft.a
-CC = gcc
-GFLAGS = -Wall -Wextra -Werror
-SRC=ft_isalpha.c \
-	ft_isdigit.c \
-	ft_isalnum.c \
-	ft_isascii.c \
-	ft_isprint.c \
-	ft_bzero.c \
-	ft_memset.c	\
+LIBNAME = libft.a
+FLAGS = -Wall -Wextra -Werror
+SRC =ft_isalpha.c\
+	ft_isdigit.c\
+	ft_isalnum.c\
+	ft_isascii.c\
+	ft_isprint.c\
+	ft_bzero.c\
+	ft_memset.c\
 	ft_strlen.c\
 	ft_toupper.c\
 	ft_tolower.c\
@@ -38,22 +37,23 @@ SRC=ft_isalpha.c \
 	
 OBJECTS = $(SRC:%.c=%.o)
 AR = ar rcs
-RM = rm -f 
+RM = rm -f
 
-all : $(NAME)
+all : $(LIBNAME)
 
-$(NAME) : $(OBJECTS)
-	@$(AR) $(NAME) $(OBJECTS) 
+$(LIBNAME) : $(OBJECTS) libft.h
+	@$(AR) $(LIBNAME) $(OBJECTS)
 
+%.o : %.c
+	@cc $(FLAGS) -c $< -o $@
 
-%.o : %.c 
-	@$(CC) $(GFLAGS) -c $< -o $@
-
-test : $(NAME) main.c
-	@$(CC) $(GFLAGS) main.c $(NAME) -o main
-
-fclean : clean
-	@$(RM) $(OBJECTS) $(NAME)
+test : $(LIBNAME) main.c
+	@cc $(FLAGS) main.c $(LIBNAME) -o main && ./main
 
 clean : 
-	@$(RM) main
+	@$(RM) $(OBJECTS)
+
+fclean : clean
+	@$(RM) $(LIBNAME)
+
+re : fclean all
