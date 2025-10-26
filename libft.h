@@ -6,17 +6,17 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:10:06 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/23 21:54:25 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/26 17:56:59 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
-# include <stdio.h>
+# include <stddef.h> // ssssss
+# include <stdio.h> // dsssss
+# include <string.h> //sssss
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);
@@ -56,9 +56,9 @@ void	ft_putnbr_fd(int n, int fd);
 
 #endif
 
-// make file 
-// memory layout
+// ###### make file
+// ###### memory layout
+// ###### memory leak
+// ###### casting
+// ###### seg fault | bus error 
 // fd 
-// seg fault | bus error 
-// memory leak
-// 

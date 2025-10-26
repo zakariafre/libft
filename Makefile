@@ -41,10 +41,10 @@ RM = rm -f
 
 all : $(LIBNAME)
 
-$(LIBNAME) : $(OBJECTS) libft.h
+$(LIBNAME) : $(OBJECTS)
 	@$(AR) $(LIBNAME) $(OBJECTS)
 
-%.o : %.c
+%.o : %.c libft.h
 	@cc $(FLAGS) -c $< -o $@
 
 test : $(LIBNAME) main.c

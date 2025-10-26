@@ -35,9 +35,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*s2;
 	int		start;
 	int		end;
+	int		i;
 	int		memlen;
 
 	end = 0;
+	i = 0;
 	if (!s1 || !set)
 		return (NULL);
 	if (set[0] == '\0')

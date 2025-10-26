@@ -12,10 +12,8 @@
 
 #include "libft.h"
 
-int main()
-{	
-	char *s1 = "***zakariae *++";
-	char *set = "*+";
-
-	printf("%s\n", ft_strtrim(s1, set));
-}
+// char *str()
+// {
+// 	char str[] = "aaaaaaaaaaaaa";
+// 	// return (str);
+// }
