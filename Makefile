@@ -48,7 +48,8 @@ $(LIBNAME) : $(OBJECTS)
 	@cc $(FLAGS) -c $< -o $@
 
 test : $(LIBNAME) main.c
-	@cc $(FLAGS) main.c $(LIBNAME) -o main && ./main
+	@cc $(FLAGS) main.c $(LIBNAME) -o main && ./main 
+	@# ggddgxxkaADASFGERTERTEREWREWRDSFDGDFGDFGDGDFGDF
 
 clean : 
 	@$(RM) $(OBJECTS)
@@ -57,3 +58,5 @@ fclean : clean
 	@$(RM) $(LIBNAME)
 
 re : fclean all
+
+.PHONY: clean fclean re

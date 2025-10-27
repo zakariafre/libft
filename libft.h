@@ -6,7 +6,7 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:10:06 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/26 17:56:59 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:40:18 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ void	ft_putnbr_fd(int n, int fd);
 // ###### memory layout
 // ###### memory leak
 // ###### casting
-// ###### seg fault | bus error 
-// fd 
+// ###### seg fault | bus error
+// ###### fd
+// bases

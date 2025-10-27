@@ -12,8 +12,7 @@
 
 #include "libft.h"
 
-// char *str()
-// {
-// 	char str[] = "aaaaaaaaaaaaa";
-// 	// return (str);
-// }
+int main()
+{
+	
+}
