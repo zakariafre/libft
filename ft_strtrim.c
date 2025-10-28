@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*copytodest(void *s2, const void *s1, int memlen, int start)
+char	*copytodest(void *s2, char const *s1, int memlen, int start)
 {
 	int		i;
 	char	*str1;

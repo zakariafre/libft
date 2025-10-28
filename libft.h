@@ -6,7 +6,7 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 18:10:06 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/28 18:18:46 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/10/28 22:11:09 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,3 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 #endif
-
-// ###### make file
-// ###### memory layout
-// ###### memory leak
-// ###### casting
-// ###### seg fault | bus error
-// ###### fd
-// bases
