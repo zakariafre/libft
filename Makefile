@@ -41,7 +41,7 @@ RM = rm -f
 
 all : $(LIBNAME)
 
-$(LIBNAME) : $(OBJECTS)
+$(LIBNAME) : $(OBJECTS) 
 	@$(AR) $(LIBNAME) $(OBJECTS)
 
 %.o : %.c libft.h
@@ -59,4 +59,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY: clean fclean re
+.PHONY: clean

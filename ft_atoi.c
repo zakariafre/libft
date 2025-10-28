@@ -32,10 +32,6 @@ int	ft_atoi(const char	*str)
 	while (str[i] && ft_isdigit(str[i]))
 	{
 		res = res * 10 + (str[i] - 48);
-		if (res > 2147483647 && sign == 1)
-			return (-1);
-		if (res < -2147483648 && sign == -1)
-			return (0);
 		i++;
 	}
 	return (res * sign);
