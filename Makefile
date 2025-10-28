@@ -47,6 +47,9 @@ $(LIBNAME) : $(OBJECTS)
 %.o : %.c libft.h
 	@cc $(FLAGS) -c $< -o $@
 
+test : $(LIBNAME) main.c
+	@cc $(FLAGS) main.c $(LIBNAME) -o main && ./main
+
 clean : 
 	@$(RM) $(OBJECTS)
 
