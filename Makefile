@@ -1,4 +1,4 @@
-LIBNAME = libft.a
+NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
 SRC =ft_isalpha.c\
 	ft_isdigit.c\
@@ -34,26 +34,41 @@ SRC =ft_isalpha.c\
 	ft_putstr_fd.c\
 	ft_putendl_fd.c\
 	ft_putnbr_fd.c
+
+BONUS = ft_lstnew.c \
+		ft_lstlast.c \
+		ft_lstsize.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstadd_front.c \
+		ft_lstadd_back.c \
+		ft_lstiter.c \
+		ft_lstmap.c 
+
 	
 OBJECTS = $(SRC:%.c=%.o)
+B_OBJECTS = $(BONUS:%.c=%.o) 
 AR = ar rcs
 RM = rm -f
 
-all : $(LIBNAME)
+all : $(NAME)
 
-$(LIBNAME) : $(OBJECTS) 
-	@$(AR) $(LIBNAME) $(OBJECTS)
+$(NAME) : $(OBJECTS)
+	@$(AR) $(NAME) $(OBJECTS)
 
 %.o : %.c libft.h
 	@cc $(FLAGS) -c $< -o $@
 
-test : $(LIBNAME) main.c
-	@cc $(FLAGS) main.c $(LIBNAME) -o main && ./main
+bonus : $(B_OBJECTS)
+	@$(AR) $(NAME) $(B_OBJECTS)
 
 clean : 
-	@$(RM) $(OBJECTS)
+	@$(RM) $(OBJECTS) $(B_OBJECTS)
 
 fclean : clean
-	@$(RM) $(LIBNAME)
+	@$(RM) $(NAME)
 
 re : fclean all
+
+test : $(NAME) main.c
+	@cc $(FLAGS) main.c $(NAME) -o main && ./main
