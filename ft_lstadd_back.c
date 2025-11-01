@@ -6,7 +6,7 @@
 /*   By: zahrabar <zahrabar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 14:57:01 by zahrabar          #+#    #+#             */
-/*   Updated: 2025/10/31 16:20:04 by zahrabar         ###   ########.fr       */
+/*   Updated: 2025/11/01 03:49:29 by zahrabar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	while (temp_node->next != NULL)
 		temp_node = temp_node->next;
 	temp_node->next = new;
-	new->next = NULL;
 }
